@@ -13,4 +13,4 @@ class Figure:
         assert isinstance(figure, Figure), "Ошибка. Это не геометрическая фигура"
         return self.get_area() + figure.get_area()
 
-# Мб стоит переписать через if с проверкой являеся ли figure экземляром класса Firuge
+# Мб стоит переписать через if с проверкой является ли figure экземпляром класса Figure
