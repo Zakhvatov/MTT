@@ -9,8 +9,8 @@ class Figure:
         pass
 
     def add_area(self, figure):
-        assert isinstance(figure, Figure), "Ошибка. Это не геометрическая фигура"
-        return self.get_area() + figure.get_area()
+        if isinstance(figure, Figure):
+            return round(self.get_area() + figure.get_area(), 2)
+        raise ValueError(f'Object {figure} is not subclass of Figure class')
 
-#Мб стоит переписать через if с проверкой являеся ли figure экземляром класса Firuge
 

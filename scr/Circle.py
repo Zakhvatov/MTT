@@ -1,10 +1,12 @@
-from Figure import Figure
+from scr.Figure import Figure
 
 
 class Circle(Figure):
     def __init__(self, radius: int):
         super().__init__('Circle')
         self.radius = radius
+        if radius <= 0:
+            raise ValueError('Радиус круга должен больше 0')
 
 
     def get_perimeter(self):
